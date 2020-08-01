@@ -1,0 +1,12 @@
+.container-fluid
+  .row.mt-5
+    %h1.col.text-center oshinagaki
+.container-fluid
+  .row.mt-3.mb-5
+    %p.col.text-center oshinagakiは食べたいメニューや飲みたいドリンクから飲食店を探すサービスです。
+.container-fluid
+  .row.d-flex.justify-content-around.mt-5
+    %button.btn.btn-primary.btn-block.btn-lg.w-25{type: "button"}
+      = link_to "お店の検索",  search_restaurants_path, class: "text-white"
+    %button.btn.btn-success.btn-lg.w-25{type: "button"}
+      = link_to "店舗ログイン・新規登録", new_restaurant_session_path, class: "text-white"

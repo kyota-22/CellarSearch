@@ -5,8 +5,8 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -52,3 +52,15 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "haml-rails", ">= 1.0", '<= 2.0.1'
+gem 'font-awesome-sass'
+gem 'pry-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'rubocop', require: false
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'mysql2'
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
+gem 'devise'

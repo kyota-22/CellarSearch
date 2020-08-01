@@ -1,0 +1,121 @@
+.container-fluid
+  .restaurant-info
+    .row
+      %img.img-thumbnail.col-4{alt: "...", src: "..."}/
+      .card-body.col-8
+        %h5.card-title
+          店名
+        .row
+          %p.card-text.col-6
+            住所
+          %p.card-text.col-2
+            電話番号
+        %small.text-muted
+          宣伝
+.container-fluid
+  .row.bg-warning
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 食事メニュー
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+      %td 枝豆
+      %td ３００円
+      %td 前菜
+    %tr
+      %td 唐揚げ
+      %td ５００円
+      %td おかず
+    %tr
+      %td チャーハン
+      %td ７００円
+      %td 主菜
+
+.container-fluid
+  .row.bg-primary
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 ドリンクメニュー
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+      %td スーパードライ
+      %td ５００円
+      %td 乾杯
+    %tr
+      %td レモンサワー
+      %td ４００円
+      %td すっきり
+    %tr
+      %td ウーロン茶
+      %td ３００円
+      %td ノンアルコール
+
+.container-fluid
+  .row.bg-danger
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 ワインリスト
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} タイプ
+      %th{scope: "col"} 生産地
+      %th{scope: "col"} 品種
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+      %td シャブリ
+      %td ５０００円
+      %td 白・酸強
+      %td フランス・シャブリ
+      %td シャルドネ
+      %td カキ◯
+    %tr
+      %td ロバートモンダヴィ
+      %td ７０００円
+      %td 赤・フルボディ
+      %td アメリカ・カリフォルニア
+      %td カベルネ・ソーヴィニヨン
+      %td お肉◯
+
+.container-fluid
+  .row.bg-success
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 日本酒リスト
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} 都道府県
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+      %td 多満自慢 純米無濾過
+      %td ７００円
+      %td 東京
+      %td 熱燗
+    %tr
+      %td 鶴齢 純米吟醸
+      %td ９００円
+      %td 新潟県
+      %td 冷酒

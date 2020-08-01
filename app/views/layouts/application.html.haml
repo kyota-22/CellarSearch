@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Oshinagaki2
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'  
+    %body
+      .container-fluid.sticky-top
+        .row.bg-info
+          .col-1
+          .h2.col-8.text-white
+            = link_to "ohinagaki", "/", class: "text-white"
+          - if restaurant_signed_in?
+            .col-3
+              .row.text-justify
+                .col.h5
+                  = link_to "ログアウト", destroy_restaurant_session_path, method: :delete, class: "text-white"
+                .col.h5
+                  = link_to "店舗情報編集", edit_restaurant_registration_path, class: "text-white"
+          - else
+            .col-3
+              .row.text-justify
+                .col.h5
+                  = link_to "店舗ログイン", new_restaurant_session_path, class: "text-white"
+                .col.h5
+                  = link_to "新規店舗登録", new_restaurant_registration_path, class: "text-white"
+      = yield
