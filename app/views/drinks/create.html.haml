@@ -4,4 +4,4 @@
 .container-fluid
   .row
     %button.btn.btn-success{type: "button"}
-      = link_to "店舗ページ", "/restaurants/show", class: "text-white"
+      = link_to "店舗ページ", "/restaurants/#{current_restaurant.id}", class: "text-white"

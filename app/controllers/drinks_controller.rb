@@ -9,12 +9,12 @@ class DrinksController < ApplicationController
   end
 
   def create
-    @drink = Drink.create(name: drink_params[:name], price: drink_params[:price], comment: drink_params[:comment])
+    @drink = Drink.create(drink_params)
   end
 
   private
   def drink_params
-    params.require(:drink).permit(:name, :price, :comment)
+    params.require(:drink).permit(:name, :price, :comment).merge(restaurant_id: current_restaurant.id)
   end
 
 end

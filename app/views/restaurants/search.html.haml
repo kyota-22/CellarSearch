@@ -1,87 +1,20 @@
-.container-fluid
-  = form_with url: search_restaurants_path, method: 'get', local: true do |f|
-    .row.mt-5.mb-3
-      .col-6
-        = f.text_field :name, class: 'form-control', placeholder: '店名'
-      .col-6
-        = f.text_field :addres, class: 'form-control', placeholder: '地域'
-    .row.mb-3
-      .col-6
-        = f.text_field :station, class: 'form-control', placeholder: '駅'
-      .col-6
-        = f.text_field :food, class: 'form-control', placeholder: '食べたいもの'
-    .row.mb-5
-      .col-6
-        = f.text_field :drink, class: 'form-control', placeholder: '飲みたいもの'
-      .col-6
-        %button.btn.btn-primary{type: "submit"} 検索
-
 .card.mb-3{style: "max-width: 1080px;"}
   .d-flex.mw-100
     .row.no-gutters.w-50
-      .col-md-4
-        %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
-          %title Placeholder
-          %rect{fill: "#868e96", height: "100%", width: "100%"}
-          %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
-      .col-md-8
-        .card-body
-          %h5.card-title
-            = link_to "店名", "/restaurants/show"
-          %p.card-text
-            住所
-          %p.card-text
-            電話番号
-            %small.text-muted
-              宣伝
-    .row.no-gutters.w-50
-      .col-md-4
-        %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
-          %title Placeholder
-          %rect{fill: "#868e96", height: "100%", width: "100%"}
-          %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
-      .col-md-8
-        .card-body
-          %h5.card-title
-            = link_to "店名", "/restaurants/show"
-          %p.card-text
-            住所
-          %p.card-text
-            電話番号
-            %small.text-muted
-              宣伝
-
-.card.mb-3{style: "max-width: 1080px;"}
-  .d-flex.mw-100
-    .row.no-gutters.w-50
-      .col-md-4
-        %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
-          %title Placeholder
-          %rect{fill: "#868e96", height: "100%", width: "100%"}
-          %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
-      .col-md-8
-        .card-body
-          %h5.card-title
-            = link_to "店名", "/restaurants/show"
-          %p.card-text
-            住所
-          %p.card-text
-            電話番号
-            %small.text-muted
-              宣伝
-    .row.no-gutters.w-50
-      .col-md-4
-        %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
-          %title Placeholder
-          %rect{fill: "#868e96", height: "100%", width: "100%"}
-          %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
-      .col-md-8
-        .card-body
-          %h5.card-title
-            = link_to "店名", "/restaurants/show"
-          %p.card-text
-            住所
-          %p.card-text
-            電話番号
-            %small.text-muted
-              宣伝
+      - @restaurants.each do |restaurant|
+        .col-md-4
+          %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
+            %title Placeholder
+            %rect{fill: "#868e96", height: "100%", width: "100%"}
+            %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
+        .col-md-8
+          .card-body
+            %h5.card-title
+              = restaurant.name
+              = link_to "店舗ページへ", restaurant_path(restaurant.id)
+              %p.card-text
+                = restaurant.addres
+              %p.card-text
+                = restaurant.tel
+              %p.card-text
+                = restaurant.comment

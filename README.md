@@ -21,7 +21,7 @@
 |name|string|add_index: true|
 |price|string|add_index: true|
 |comment|string|add_index: true|
-|restaurant_id|integer|null: false, foreign_key: true|
+|restaurant_id|integer|null: false|
 ## Associations
 - belongs_to :restaurant
 
@@ -31,6 +31,7 @@
 |name|string|add_index: true|
 |price|string|add_index: true|
 |comment|string|add_index: true|
+|restaurant_id|integer|null: false|
 
 ## Associations
 - belongs_to :restaurant
@@ -44,6 +45,7 @@
 |area|string|add_index: true|
 |variety|string|add_index: true|
 |comment|string|add_index: true|
+|restaurant_id|integer|null: false|
 
 ## Associations
 - belongs_to :restaurant
@@ -55,6 +57,7 @@
 |price|string|add_index: true|
 |area|string|add_index: true|
 |comment|string|add_index: true|
+|restaurant_id|integer|null: false|
 
 ## Associations
 - belongs_to :restaurant

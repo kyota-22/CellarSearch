@@ -6,7 +6,30 @@
     %p.col.text-center oshinagakiは食べたいメニューや飲みたいドリンクから飲食店を探すサービスです。
 .container-fluid
   .row.d-flex.justify-content-around.mt-5
-    %button.btn.btn-primary.btn-block.btn-lg.w-25{type: "button"}
-      = link_to "お店の検索",  search_restaurants_path, class: "text-white"
     %button.btn.btn-success.btn-lg.w-25{type: "button"}
       = link_to "店舗ログイン・新規登録", new_restaurant_session_path, class: "text-white"
+%h1 店舗検索
+.container-fluid
+  = search_form_for @q, url: search_restaurants_path do |f|
+    .row.mt-5.mb-3
+      .col-6
+        = f.search_field :name_cont, class: 'form-control', placeholder: '店名'
+      .col-6
+        = f.search_field :addres_cont, class: 'form-control', placeholder: '地域'
+    .row.mb-3
+      .col-6
+        = f.search_field :station_cont, class: 'form-control', placeholder: '駅'
+    .row.mb-5
+      .col-6
+        = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '飲みたいもの'
+      .col-6
+        = f.submit '検索', class: 'btn btn-primary search-btn'
+      -# .col-6
+      -#   = f.submit '検索', class: 'btn btn-primary search-btn'
+      -# .col-6
+      -#   = f.search_field :food_cont, class: 'form-control', placeholder: '食べたいもの'
+    -# .row.mb-5
+    -#   .col-6
+    -#     = f.search_field :drink_cont, class: 'form-control', placeholder: '飲みたいもの'
+      -# .col-6
+      -#   = f.submit '検索', class: 'btn btn-primary search-btn'
