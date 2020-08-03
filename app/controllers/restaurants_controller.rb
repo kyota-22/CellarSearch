@@ -18,11 +18,10 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    # @restaurant = current_restaurant
-    # @drinks = current_restaurant.drinks
     restaurant = Restaurant.find(params[:id])
     @restaurants = restaurant
     @drinks = restaurant.drinks
+    @foods = restaurant.foods
   end
 
   def edit

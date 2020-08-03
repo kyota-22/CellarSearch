@@ -12,31 +12,28 @@
               = @restaurants.tel
           %p.text-muted
             = @restaurants.comment
--# .container-fluid
--#   .row.bg-warning
--#     .col
--#     .c0l-4.font-italic.text-light
--#       %h4 食事メニュー
--#     .col
--# %table.table.table-striped
--#   %thead
--#     %tr
--#       %th{scope: "col"} 商品名
--#       %th{scope: "col"} 価格
--#       %th{scope: "col"} コメント
--#   %tbody
--#     %tr
--#       %td 枝豆
--#       %td ３００円
--#       %td 前菜
--#     %tr
--#       %td 唐揚げ
--#       %td ５００円
--#       %td おかず
--#     %tr
--#       %td チャーハン
--#       %td ７００円
--#       %td 主菜
+.container-fluid
+  .row.bg-warning
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 食事メニュー
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+    - @foods.each do |food|
+      %tr
+        %td
+          = food.name
+        %td
+          = food.price
+        %td
+          = food.comment
 
 .container-fluid
   .row.bg-primary

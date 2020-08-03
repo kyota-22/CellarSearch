@@ -12,16 +12,19 @@
 .container-fluid
   = search_form_for @q, url: search_restaurants_path do |f|
     .row.mt-5.mb-3
-      .col-6
+      .col
         = f.search_field :name_cont, class: 'form-control', placeholder: '店名'
+    .row.mb-3
       .col-6
         = f.search_field :addres_cont, class: 'form-control', placeholder: '地域'
-    .row.mb-3
       .col-6
         = f.search_field :station_cont, class: 'form-control', placeholder: '駅'
     .row.mb-5
       .col-6
+        = f.search_field :foods_name_cont, class: 'form-control', placeholder: '食べたいもの'
+      .col-6
         = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '飲みたいもの'
+    .row.mb-3
       .col-6
         = f.submit '検索', class: 'btn btn-primary search-btn'
       -# .col-6
