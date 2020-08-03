@@ -10,4 +10,8 @@
       .form-group.col-md-4
         %h5 コメント
         = f.text_field :comment, class: 'form-control', placeholder: '例：すぐ出る'
-    = f.submit '更新', class: '.btn .btn-primary'
+    = f.submit '更新', class: 'btn btn-primary form_btn'
+.container-fluid
+  .row.mt-5.ml-1
+    %button.btn.btn-success{type: "button"}
+      = link_to "店舗ページへ", "/restaurants/#{current_restaurant.id}", class: "text-white"

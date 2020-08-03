@@ -13,26 +13,22 @@
   = search_form_for @q, url: search_restaurants_path do |f|
     .row.mt-5.mb-3
       .col
-        = f.search_field :name_cont, class: 'form-control', placeholder: '店名'
+        店名
+        = f.search_field :name_cont, class: 'form-control', placeholder: '例：居酒屋◯◯'
     .row.mb-3
       .col-6
-        = f.search_field :addres_cont, class: 'form-control', placeholder: '地域'
+        地域
+        = f.search_field :addres_cont, class: 'form-control', placeholder: '例：◯◯市'
       .col-6
-        = f.search_field :station_cont, class: 'form-control', placeholder: '駅'
+        最寄駅
+        = f.search_field :station_cont, class: 'form-control', placeholder: '例：◯◯駅'
     .row.mb-5
       .col-6
-        = f.search_field :foods_name_cont, class: 'form-control', placeholder: '食べたいもの'
+        食べたいもの
+        = f.search_field :foods_name_cont, class: 'form-control', placeholder: '例：枝豆'
       .col-6
-        = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '飲みたいもの'
+        飲みたいもの
+        = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '例：レモンサワー'
     .row.mb-3
       .col-6
         = f.submit '検索', class: 'btn btn-primary search-btn'
-      -# .col-6
-      -#   = f.submit '検索', class: 'btn btn-primary search-btn'
-      -# .col-6
-      -#   = f.search_field :food_cont, class: 'form-control', placeholder: '食べたいもの'
-    -# .row.mb-5
-    -#   .col-6
-    -#     = f.search_field :drink_cont, class: 'form-control', placeholder: '飲みたいもの'
-      -# .col-6
-      -#   = f.submit '検索', class: 'btn btn-primary search-btn'

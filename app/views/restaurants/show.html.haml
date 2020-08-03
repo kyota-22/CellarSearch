@@ -1,12 +1,13 @@
 .container-fluid
   .restaurant-info
     .row
-      %img.img-thumbnail.col-4{alt: "...", src: "..."}/
+      -# = image_tag @restaurants.image.url, if @restaurants.image.present?
       .card-body.col-8
         %h5.card-title
-          = @restaurants.name
+          %a
+            = @restaurants.name
           .row
-            %p.card-text.col-6
+            %p.card-text.col-6    
               = @restaurants.addres
             %p.card-text.col-2
               = @restaurants.tel

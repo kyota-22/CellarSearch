@@ -10,6 +10,7 @@ class DrinksController < ApplicationController
 
   def create
     @drink = Drink.create(drink_params)
+    redirect_to action: :new
   end
 
   private

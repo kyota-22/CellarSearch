@@ -3,10 +3,8 @@
     .row.no-gutters.w-50
       - @restaurants.each do |restaurant|
         .col-md-4
-          %svg.bd-placeholder-img{"aria-label" => "Placeholder: Image", focusable: "false", height: "250", preserveaspectratio: "xMidYMid slice", role: "img", width: "100%", xmlns: "http://www.w3.org/2000/svg"}
-            %title Placeholder
-            %rect{fill: "#868e96", height: "100%", width: "100%"}
-            %text{dy: ".3em", fill: "#dee2e6", x: "50%", y: "50%"} Image
+          .bd-placeholder-img
+            = image_tag restaurant.image.url if restaurant.image.present?
         .col-md-8
           .card-body
             %h5.card-title

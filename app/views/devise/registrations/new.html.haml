@@ -18,9 +18,9 @@
         %h5 電話番号
         = f.text_field :tel, class: 'form-control', placeholder: '- は無しで記入'
     .form-row
-      .form-group.col-md-4
+      .col-md-4
         %h5 お店画像
-        = f.text_field :image, class: 'form-control', placeholder: '画像を挿入'
+        = f.file_field :image, class: 'form-control', placeholder: '画像を挿入'
       .form-group.col-md-8
         %h5 宣伝コメント
         = f.text_field :comment, class: 'form-control', placeholder: '自由にコメント'
