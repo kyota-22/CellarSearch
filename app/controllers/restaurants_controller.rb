@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
     # @search = Restaurant.search(params[:q])
     # @restaurants = @search.result
     # @drinks = Drink.includes(:restaurant)
-    @q = Restaurant.all.ransack(params[:q])       
+    @q = Restaurant.all.ransack(params[:q])
     @restaurants = @q.result
   end
 
