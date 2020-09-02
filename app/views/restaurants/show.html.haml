@@ -51,12 +51,13 @@
   %tbody
     %tr
     - @drinks.each do |drink|
-      %td
-        = drink.name
-      %td
-        = drink.price
-      %td
-        = drink.comment
+      %tr
+        %td
+          = drink.name
+        %td
+          = drink.price
+        %td
+          = drink.comment
 .container-fluid
   .row.bg-success
     .col
@@ -73,42 +74,44 @@
   %tbody
     %tr
     - @sakes.each do |sake|
-      %td
-        = sake.name
-      %td
-        = sake.price
-      %td
-        = sake.prefecture
-      %td
-        = sake.comment
--# .container-fluid
--#   .row.bg-danger
--#     .col
--#     .c0l-4.font-italic.text-light
--#       %h4 ワインリスト
--#     .col
--# %table.table.table-striped
--#   %thead
--#     %tr
--#       %th{scope: "col"} 商品名
--#       %th{scope: "col"} 価格
--#       %th{scope: "col"} タイプ
--#       %th{scope: "col"} 生産地
--#       %th{scope: "col"} 品種
--#       %th{scope: "col"} コメント
--#   %tbody
--#     %tr
--#       %td シャブリ
--#       %td ５０００円
--#       %td 白・酸強
--#       %td フランス・シャブリ
--#       %td シャルドネ
--#       %td カキ◯
--#     %tr
--#       %td ロバートモンダヴィ
--#       %td ７０００円
--#       %td 赤・フルボディ
--#       %td アメリカ・カリフォルニア
--#       %td カベルネ・ソーヴィニヨン
--#       %td お肉◯
+      %tr
+        %td
+          = sake.name
+        %td
+          = sake.price
+        %td
+          = sake.prefecture
+        %td
+          = sake.comment
+.container-fluid
+  .row.bg-danger
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 ワインリスト
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} タイプ
+      %th{scope: "col"} 生産地
+      %th{scope: "col"} 品種
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+    - @wines.each do |wine|
+      %tr
+        %td
+          = wine.name
+        %td
+          = wine.price
+        %td
+          = wine.color
+        %td
+          = wine.area
+        %td
+          = wine.variety
+        %td
+          = wine.comment
 

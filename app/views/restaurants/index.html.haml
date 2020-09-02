@@ -1,9 +1,9 @@
 .container-fluid
   .row.mt-5
-    %h1.col.text-center oshinagaki
+    %h1.col.text-center onomimono
 .container-fluid
   .row.mt-3.mb-5
-    %p.col.text-center oshinagakiは食べたいメニューや飲みたいドリンクから飲食店を探すサービスです。
+    %p.col.text-center 飲みサーチは飲みたいドリンクから飲食店を探すサービスです。
 .container-fluid
   .row.d-flex.justify-content-around.mt-5
     %button.btn.btn-success.btn-lg.w-25{type: "button"}
@@ -30,6 +30,22 @@
         生産地
         = f.search_field :sakes_prefecture_cont, class: 'form-control', placeholder: '例：山口県'
     .row.mt-5
+    %h3 ワイン検索
+    .row.mb-2
+      .col-6
+        名前
+        = f.search_field :wines_name_cont, class: 'form-control', placeholder: '例：ロバートモンダヴィ'
+      .col-6
+        生産地
+        = f.search_field :wines_area_cont, class: 'form-control', placeholder: '例：アメリカ'
+    .row.mb-2
+      .col-6
+        品種
+        = f.search_field :wines_variety_cont, class: 'form-control', placeholder: '例：カベルネ・ソーヴィニヨン'
+      .col-6
+        タイプ
+        = f.search_field :wines_color_cont, class: 'form-control', placeholder: '例：赤'
+    .row.mt-5
     %h3 その他条件
     .row.mb-2
       .col
@@ -42,6 +58,6 @@
       .col-6
         最寄駅
         = f.search_field :station_cont, class: 'form-control', placeholder: '例：◯◯駅'
-    .row.mb-3
-      .col-6
-        = f.submit '検索', class: 'btn btn-primary search-btn'
+    .row.mb-3.d-flex.justify-content-around.mt-5
+      .col-6.text-center
+        = f.submit '検索', class: 'btn btn-primary search-btn w-25'

@@ -5,7 +5,8 @@ class Restaurant < ApplicationRecord
   has_many :drinks
   has_many :foods
   has_many :sakes
-  
+  has_many :wines
+
   # def self.ransackable_attributes(auth_object = nil)
   #   %w[name, addres, station]
   # end
