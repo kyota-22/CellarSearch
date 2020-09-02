@@ -84,7 +84,7 @@
 |------|----|-------|
 |name|string|add_index: true|
 |price|string|add_index: true|
-|area|string|add_index: true|
+|prefecture|string|add_index: true|
 |comment|string|add_index: true|
 |restaurant_id|integer|null: false|
 

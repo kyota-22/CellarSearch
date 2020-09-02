@@ -22,6 +22,7 @@ class RestaurantsController < ApplicationController
     @restaurants = restaurant
     @drinks = restaurant.drinks
     @foods = restaurant.foods
+    @sakes = restaurant.sakes
   end
 
   def edit

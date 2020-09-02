@@ -49,15 +49,38 @@
       %th{scope: "col"} 価格
       %th{scope: "col"} コメント
   %tbody
+    %tr
     - @drinks.each do |drink|
-      %tr
-        %td
-          = drink.name
-        %td
-          = drink.price
-        %td
-          = drink.comment
-
+      %td
+        = drink.name
+      %td
+        = drink.price
+      %td
+        = drink.comment
+.container-fluid
+  .row.bg-success
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 日本酒リスト
+    .col
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} 商品名
+      %th{scope: "col"} 価格
+      %th{scope: "col"} 都道府県
+      %th{scope: "col"} コメント
+  %tbody
+    %tr
+    - @sakes.each do |sake|
+      %td
+        = sake.name
+      %td
+        = sake.price
+      %td
+        = sake.prefecture
+      %td
+        = sake.comment
 -# .container-fluid
 -#   .row.bg-danger
 -#     .col
@@ -89,27 +112,3 @@
 -#       %td カベルネ・ソーヴィニヨン
 -#       %td お肉◯
 
--# .container-fluid
--#   .row.bg-success
--#     .col
--#     .c0l-4.font-italic.text-light
--#       %h4 日本酒リスト
--#     .col
--# %table.table.table-striped
--#   %thead
--#     %tr
--#       %th{scope: "col"} 商品名
--#       %th{scope: "col"} 価格
--#       %th{scope: "col"} 都道府県
--#       %th{scope: "col"} コメント
--#   %tbody
--#     %tr
--#       %td 多満自慢 純米無濾過
--#       %td ７００円
--#       %td 東京
--#       %td 熱燗
--#     %tr
--#       %td 鶴齢 純米吟醸
--#       %td ９００円
--#       %td 新潟県
--#       %td 冷酒

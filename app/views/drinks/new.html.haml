@@ -15,3 +15,6 @@
   .row.mt-5.ml-1
     %button.btn.btn-success{type: "button"}
       = link_to "店舗ページへ", "/restaurants/#{current_restaurant.id}", class: "text-white"
+    .col-8
+    .col.h4
+      = link_to "日本酒リストの編集", new_sake_path
