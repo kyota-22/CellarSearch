@@ -1,9 +1,9 @@
 .container-fluid
   .row.mt-5
-    %h1.col.text-center onomimono
+    %h1.col.text-center SakeSearch
 .container-fluid
   .row.mt-3.mb-5
-    %p.col.text-center 飲みサーチは飲みたいドリンクから飲食店を探すサービスです。
+    %p.col.text-center SakeSearchはドリンクメニューから飲食店を探すサービスです。
 .container-fluid
   .row.d-flex.justify-content-around.mt-5
     %button.btn.btn-success.btn-lg.w-25{type: "button"}
@@ -12,52 +12,77 @@
   .col-3
   .col-6.text-center.mt-5
     %h1 店舗検索
+    %p 必要な部分のみ入力してください。商品と地域の入力推奨です。
   .col-3
 .container-fluid
   = search_form_for @q, url: search_restaurants_path do |f|
     .row.mb-2
-    %h3 ドリンク名
+      .col-2
+      .col
+        %h3 ドリンク名
+      .col-2
     .row.mb-2
+      .col-2
       .col
         = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '例：スーパードライ'
+      .col-2
     .row.mt-5
-    %h3 日本酒検索
+      .col-2
+      .col
+        %h3 日本酒検索
+        %p 都道府県のみの検索も可能です。
+      .col-2
     .row.mb-2
-      .col-6
+      .col-2
+      .col-4
         銘柄
         = f.search_field :sakes_name_cont, class: 'form-control', placeholder: '例：獺祭'
-      .col-6
+      .col-4
         生産地
         = f.search_field :sakes_prefecture_cont, class: 'form-control', placeholder: '例：山口県'
+      .col-2
     .row.mt-5
-    %h3 ワイン検索
+      .col-2
+      .col
+        %h3 ワイン検索
+        %p 生産地や品種のみの検索も可能です。
     .row.mb-2
-      .col-6
+      .col-2
+      .col-4
         名前
         = f.search_field :wines_name_cont, class: 'form-control', placeholder: '例：ロバートモンダヴィ'
-      .col-6
+      .col-4
         生産地
         = f.search_field :wines_area_cont, class: 'form-control', placeholder: '例：アメリカ'
+      .col-2
     .row.mb-2
-      .col-6
+      .col-2
+      .col-4
         品種
         = f.search_field :wines_variety_cont, class: 'form-control', placeholder: '例：カベルネ・ソーヴィニヨン'
-      .col-6
+      .col-4
         タイプ
         = f.search_field :wines_color_cont, class: 'form-control', placeholder: '例：赤'
+      .col-2
     .row.mt-5
-    %h3 その他条件
+      .col-2
+      .col
+        %h3 その他条件
     .row.mb-2
+      .col-2
       .col
         店名
         = f.search_field :name_cont, class: 'form-control', placeholder: '例：居酒屋◯◯'
+      .col-2
     .row.mb-3
-      .col-6
+      .col-2
+      .col-4
         地域
         = f.search_field :addres_cont, class: 'form-control', placeholder: '例：◯◯市'
-      .col-6
+      .col-4
         最寄駅
         = f.search_field :station_cont, class: 'form-control', placeholder: '例：◯◯駅'
+      .col-2
     .row.mb-3.d-flex.justify-content-around.mt-5
       .col-6.text-center
         = f.submit '検索', class: 'btn btn-primary search-btn w-25'
