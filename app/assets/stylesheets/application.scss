@@ -1,9 +1,6 @@
+@import "reset";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap";
+@import "modules/restaurant";
 @import "modules/flash";
-
-img{
-  width: 180px;
-  height: auto;
-}

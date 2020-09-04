@@ -31,12 +31,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, add_index: true|
-|address|string|add_index: true|
+|addres|string|add_index: true|
 |station|string|add_index: true|
 |tel|string|add_index: true|
 |image|string|
 |email|string|unique: true, null: false|
-|pass|string|unique: true, null: false|
+|password|string|unique: true, null: false|
 
 ## Associations
 - has_many :foods
