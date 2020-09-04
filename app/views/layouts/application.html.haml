@@ -21,7 +21,7 @@
                 .col.h5
                   = link_to "ログアウト", destroy_restaurant_session_path, method: :delete, class: "text-white"
                 .col.h5
-                  = link_to "店舗情報編集", edit_restaurant_registration_path, class: "text-white"
+                  = link_to "店舗情報編集", edit_restaurant_registration_path(current_restaurant), class: "text-white"
           - else
             .col-3
               .row.text-justify

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :restaurants, only: [:index, :show, :update]
+  resources :restaurants, only: [:index, :show, :edit, :update]
   resources :drinks, only: [:index, :new, :create]
   resources :foods, only: [:index, :new, :create]
   resources :sakes, only: [:new, :create]

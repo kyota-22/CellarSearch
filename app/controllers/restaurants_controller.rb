@@ -30,7 +30,13 @@ class RestaurantsController < ApplicationController
   end
 
   def update
+    current_restaurant.update(restaurant_params)
+    redirect_to root_path
   end
   
-  
+  private
+  def  restaurant_params
+    params.require(:restaurant).permit(:name, :addres, :station, :tel, :image, :email, :comment)
+  end
+
 end
