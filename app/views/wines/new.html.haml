@@ -1,4 +1,10 @@
 .container-fluid
+  .row.mt-5.ml-1.text-right
+    .col
+    %button.btn.btn-success{type: "button"}
+      = link_to "店舗ページへ", "/restaurants/#{current_restaurant.id}", class: "text-white"
+    .col-1
+.container-fluid
   = form_with model: @wine, local: true do |f|
     .form-row.mt-5
       .col-1
@@ -30,9 +36,3 @@
     .row.mt-5
       .col.text-center
         = f.submit 'リストを更新する', class: 'btn btn-primary w-25'
-.container-fluid
-  .row.mt-5.ml-1.text-right
-    .col
-    %button.btn.btn-success{type: "button"}
-      = link_to "店舗ページへ", "/restaurants/#{current_restaurant.id}", class: "text-white"
-    .col-1

@@ -7,8 +7,9 @@
           .row.no-gutters.w-50
             - @restaurants.each do |restaurant|
               .col-md-4
-                .bd-placeholder-img
-                  = image_tag restaurant.image.url if restaurant.image.present?
+                - if restaurant.image.present?
+                  .bd-placeholder-img
+                    = image_tag restaurant.image.url, size: "180x160"
               .col-md-8
                 .card-body
                   %h5.card-title

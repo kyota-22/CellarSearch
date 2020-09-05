@@ -1,20 +1,21 @@
 .container-fluid
   .restaurant-info
-    .row
-      -# = image_tag @restaurants.image.url, if @restaurants.image.present?
-      .col-2
+    .row.mt-4.mb-4.d-flex.justify-content-center
+      - if @restaurants.image.present?
+        .col
+        = image_tag @restaurants.image.url, size: "220x160"
       .card-body.col-8
-        %h5.card-title
-          %a
+        .card-title
+          %a.col.h3
             = @restaurants.name
           .row
-            %p.card-text.col-6
+            %p.card-text.col-6.mt-4.h5
               = @restaurants.addres
-            %p.card-text.col-2
+            .card-text.col-2
+              %p.h6 電話番号
               = @restaurants.tel
           %p.text-muted
             = @restaurants.comment
-      .col-2
 .container-fluid
   .row.bg-warning
     .col
@@ -28,9 +29,9 @@
       %table.table.table-striped
         %thead
           %tr
-            %th{scope: "col"} 商品名
-            %th{scope: "col"} 価格
-            %th{scope: "col"} コメント
+            %th{scope: "col", class: "name_width"} 商品名
+            %th{scope: "col", class: "price_width"} 価格
+            %th{scope: "col", class: "comment_width"} コメント
         %tbody
           %tr
           - @foods.each do |food|
@@ -45,7 +46,7 @@
 .container-fluid
   .row.bg-primary
     .col
-    .c0l-4.font-italic.text-light
+    .font-italic.text-light
       %h4 ドリンクメニュー
     .col
 .container-fluid
@@ -55,9 +56,9 @@
       %table.table.table-striped
         %thead
           %tr
-            %th{scope: "col"} 商品名
-            %th{scope: "col"} 価格
-            %th{scope: "col"} コメント
+            %th{scope: "col", class: "name_width"} 商品名
+            %th{scope: "col", class: "price_width"} 価格
+            %th{scope: "col", class: "comment_width"} コメント
         %tbody
           %tr
           - @drinks.each do |drink|
@@ -80,10 +81,10 @@
       %table.table.table-striped
         %thead
           %tr
-            %th{scope: "col"} 商品名
-            %th{scope: "col"} 価格
-            %th{scope: "col"} 都道府県
-            %th{scope: "col"} コメント
+            %th{scope: "col", class: "sake_name"} 商品名
+            %th{scope: "col", class: "sake_price"} 価格
+            %th{scope: "col", class: "sake_prefecture"} 都道府県
+            %th{scope: "col", class: "sake_comment"} コメント
         %tbody
           %tr
           - @sakes.each do |sake|
@@ -110,12 +111,12 @@
       %table.table.table-striped
         %thead
           %tr
-            %th{scope: "col"} 商品名
-            %th{scope: "col"} 価格
-            %th{scope: "col"} タイプ
-            %th{scope: "col"} 生産地
-            %th{scope: "col"} 品種
-            %th{scope: "col"} コメント
+            %th{scope: "col", class: "wine_name"} 商品名
+            %th{scope: "col", class: "wine_price"} 価格
+            %th{scope: "col", class: "wine_type"} タイプ
+            %th{scope: "col", class: "wine_area"} 生産地
+            %th{scope: "col", class: "wine_variety"} 品種
+            %th{scope: "col", class: "wine_comment"} コメント
         %tbody
           %tr
           - @wines.each do |wine|
@@ -133,4 +134,3 @@
               %td
                 = wine.comment
     .col-1
-    
