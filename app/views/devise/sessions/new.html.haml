@@ -1,18 +1,25 @@
 .container-fluid
   = form_with model: @restaurant, url: new_restaurant_session_path, local: true do |f|
-    .form-group
-      .form-group.col-md-6
+    .row.mt-5
+      .col-1
+      .form-group.col
         %h5 メールアドレス
         = f.email_field :email, class: 'form-control', placeholder: 'Email'
+      .col-1
     .form-row
-      .form-group.col-md-6
+      .col-1
+      .form-group.col-md-5
         %h5 パスワード
         = f.password_field :password, class: 'form-control', placeholder: 'password'
-      .form-group.col-md-6
+      .form-group.col-md-5
         %h5 パスワード(確認)
         = f.password_field :password_confirmation, class: 'form-control', placeholder: '左記と同じパスワードを記入'
-    = f.submit 'ログイン', class: '.btn .btn-primary'
-
+      .col-1
+    .row.mt-5
+      .col.text-center
+        = f.submit 'ログイン', class: 'btn btn-primary w-25'
 .container-fluid
-  .col.h5
-    = link_to "店舗の新規登録はこちら", new_restaurant_registration_path
+  .row.mt-5.text-right
+    .col.h4
+      = link_to "店舗の新規登録はこちら", new_restaurant_registration_path
+    .col-1

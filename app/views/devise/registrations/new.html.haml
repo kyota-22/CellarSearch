@@ -1,34 +1,47 @@
 .container-fluid
   = form_with model: @restaurant, local: true do |f|
-    .form-group
-      %h5 店名
-      = f.text_field :name, class: 'form-control', placeholder: '例：居酒屋〇〇'
+    .row.mt-5
+      .col-1
+      .form-group.col
+        %h5 店名
+        = f.text_field :name, class: 'form-control', placeholder: '例：居酒屋〇〇'
+      .col-1
     .form-row
-      .form-group.col-md-8
+      .col-1
+      .form-group.col-md-7
         %h5 住所
         = f.text_field :addres, class: 'form-control', placeholder: '都道府県から記入'    
-      .form-group.col-md-4
+      .form-group.col-md-3
         %h5 最寄駅
         = f.text_field :station, class: 'form-control', placeholder: '例：〇〇駅　駅まで記入'    
+      .col-1
     .form-row
-      .form-group.col-md-6
+      .col-1
+      .form-group.col-md-5
         %h5 メールアドレス
         = f.email_field :email, class: 'form-control', placeholder: 'Email'
-      .form-group.col-md-6
+      .form-group.col-md-5
         %h5 電話番号
         = f.text_field :tel, class: 'form-control', placeholder: '- は無しで記入'
+      .col-1
     .form-row
-      .col-md-4
+      .col-1
+      .col-md-3
         %h5 お店画像
         = f.file_field :image, class: 'form-control', placeholder: '画像を挿入'
-      .form-group.col-md-8
+      .form-group.col-md-7
         %h5 宣伝コメント
         = f.text_field :comment, class: 'form-control', placeholder: '自由にコメント'
+      .col-1
     .form-row
-      .form-group.col-md-6
+      .col-1
+      .form-group.col-md-5
         %h5 パスワード
         = f.password_field :password, class: 'form-control', placeholder: 'password'
-      .form-group.col-md-6
+      .form-group.col-md-5
         %h5 パスワード(確認)
         = f.password_field :password_confirmation, class: 'form-control', placeholder: '左記と同じパスワードを記入'
-    = f.submit '登録', class: '.btn .btn-primary'
+      .col-1
+    .row.mt-5
+      .col.text-center
+        = f.submit '新規登録', class: 'btn btn-primary w-25'
