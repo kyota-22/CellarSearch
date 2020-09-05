@@ -1,0 +1,27 @@
+.container-fluid
+  .row.bg-primary
+    .col
+    .font-italic.text-light
+      %h4 ドリンクメニュー
+    .col
+.container-fluid
+  .row
+    .col-1
+    .col
+      %table.table.table-striped
+        %thead
+          %tr
+            %th{scope: "col", class: "name_width"} 商品名
+            %th{scope: "col", class: "price_width"} 価格
+            %th{scope: "col", class: "comment_width"} コメント
+        %tbody
+          %tr
+          - @drinks.each do |drink|
+            %tr
+              %td
+                = drink.name
+              %td
+                = drink.price
+              %td
+                = drink.comment
+    .col-1

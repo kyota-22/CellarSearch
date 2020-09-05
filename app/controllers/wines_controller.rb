@@ -1,6 +1,8 @@
 class WinesController < ApplicationController
   def new
     @wine = Wine.new
+    restaurant = Restaurant.find(current_restaurant.id)
+    @wines = restaurant.wines
   end
 
   def create

@@ -1,11 +1,9 @@
 class DrinksController < ApplicationController
 
-  def index
-    @drinks = Drink.all
-  end
-
   def new
     @drink = Drink.new
+    restaurant = Restaurant.find(current_restaurant.id)
+    @drinks = restaurant.drinks
   end
 
   def create

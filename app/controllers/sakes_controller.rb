@@ -1,6 +1,8 @@
 class SakesController < ApplicationController
   def new
     @sake = Sake.new
+    restaurant = Restaurant.find(current_restaurant.id)
+    @sakes = restaurant.sakes
   end
 
   def create

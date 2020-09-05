@@ -6,6 +6,8 @@ class FoodsController < ApplicationController
 
   def new
     @food = Food.new
+    restaurant = Restaurant.find(current_restaurant.id)
+    @foods = restaurant.foods
   end
 
   def create

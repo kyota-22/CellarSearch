@@ -1,0 +1,36 @@
+.container-fluid
+  .row.bg-danger
+    .col
+    .c0l-4.font-italic.text-light
+      %h4 ワインリスト
+    .col
+.container-fluid
+  .row
+    .col-1
+    .col
+      %table.table.table-striped
+        %thead
+          %tr
+            %th{scope: "col", class: "wine_name"} 商品名
+            %th{scope: "col", class: "wine_price"} 価格
+            %th{scope: "col", class: "wine_type"} タイプ
+            %th{scope: "col", class: "wine_area"} 生産地
+            %th{scope: "col", class: "wine_variety"} 品種
+            %th{scope: "col", class: "wine_comment"} コメント
+        %tbody
+          %tr
+          - @wines.each do |wine|
+            %tr
+              %td
+                = wine.name
+              %td
+                = wine.price
+              %td
+                = wine.color
+              %td
+                = wine.area
+              %td
+                = wine.variety
+              %td
+                = wine.comment
+    .col-1

@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     end
   end
   resources :restaurants, only: [:index, :show, :edit, :update]
-  resources :drinks, only: [:index, :new, :create]
-  resources :foods, only: [:index, :new, :create]
+  resources :drinks, only: [:new, :create]
+  resources :foods, only: [:new, :create]
   resources :sakes, only: [:new, :create]
   resources :wines, only: [:new, :create]
   root "restaurants#index"
