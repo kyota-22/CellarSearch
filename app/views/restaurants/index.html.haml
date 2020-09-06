@@ -10,11 +10,10 @@
   .col-3
   .col-6.text-center.mt-5
     %h1 店舗検索
-    %p 必要な部分のみ入力してください。商品と地域の入力推奨です。
   .col-3
 .container-fluid
   = search_form_for @q, url: search_restaurants_path do |f|
-    .row.mb-2
+    .row.mb-2.mt-3
       .col-2
       .col
         %h3 ドリンク名
@@ -28,7 +27,6 @@
       .col-2
       .col
         %h3 日本酒検索
-        %p 都道府県のみの検索も可能です。
       .col-2
     .row.mb-2
       .col-2
@@ -43,7 +41,6 @@
       .col-2
       .col
         %h3 ワイン検索
-        %p 生産地や品種のみの検索も可能です。
     .row.mb-2
       .col-2
       .col-4
@@ -81,6 +78,11 @@
         最寄駅
         = f.search_field :station_cont, class: 'form-control', placeholder: '例：◯◯駅'
       .col-2
-    .row.mb-3.d-flex.justify-content-around.mt-5
+    .row
+      .text-right.col.mt-3
+        %p ※必要な部分のみ入力してください
+        %p ※お探しの商品とその他条件で探すと便利です
+      .col-2
+    .row.mb-3.d-flex.justify-content-around.mt-3
       .col-6.text-center
         = f.submit '検索', class: 'btn btn-primary search-btn w-25'

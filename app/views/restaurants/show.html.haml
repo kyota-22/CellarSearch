@@ -16,7 +16,11 @@
               = @restaurants.tel
           %p.text-muted
             = @restaurants.comment
-= render partial: "foods/index"
-= render partial: "drinks/index"
-= render partial: "sakes/index"
-= render partial: "wines/index"
+- if @foods.present?
+  = render "foods/index"
+- if @drinks.present?
+  = render "drinks/index"
+- if @sakes.present?
+  = render "sakes/index"
+- if @wines.present?
+  = render "wines/index"
