@@ -8,7 +8,15 @@ class DrinksController < ApplicationController
 
   def create
     @drink = Drink.create(drink_params)
-    redirect_to action: :new
+    # drink.jsから送られてきたjson形式のリクエストに対してjson形式でレスポンスをする記述
+    # (これによりビューファイルとしてjbuilder(create.json.jbuilder)のデータが返される)
+    if @drink.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      redirect_to action: :new
+    end
   end
 
   private
