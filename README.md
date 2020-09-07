@@ -64,11 +64,11 @@ deviseを使用した飲食店の登録フォームです。
 
 # 使用技術(開発環境)
 ## フロントエンド
-Haml,Sass
+Haml,Sass,JavaScript,jQuery,Ajax
 ## バックエンド
 Ruby,Ruby on Rails
 ## データベース
-MySQL
+MySQL,SequelPro
 ## ソース管理
 Github,GithubDesktop
 ## エディタ
