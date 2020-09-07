@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title SakeSearch
+    %title CellarSearch
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -14,7 +14,7 @@
         .row.bg-info
           .col-1
           .h2.col-8.text-white
-            = link_to "SakeSearch", "/", class: "text-white"
+            = link_to "CellarSearch", "/", class: "text-white"
           - if restaurant_signed_in?
             .col-3
               .row.text-justify
