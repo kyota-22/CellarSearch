@@ -17,8 +17,7 @@
             %th{scope: "col", class: "wine_area"} 生産地
             %th{scope: "col", class: "wine_variety"} 品種
             %th{scope: "col", class: "wine_comment"} コメント
-        %tbody
-          %tr
+        %tbody{class: "wine_list"}
           - @wines.each do |wine|
             %tr
               %td

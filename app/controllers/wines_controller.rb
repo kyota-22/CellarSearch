@@ -7,7 +7,13 @@ class WinesController < ApplicationController
 
   def create
     @wine = Wine.create(wine_params)
-    redirect_to action: :new
+    if @wine.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      redirect_to action: :new
+    end
   end
 
   private
