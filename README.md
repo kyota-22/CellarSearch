@@ -1,5 +1,5 @@
 # アプリ名
-  CellarSearch
+  CellarSearch  
   Cellar→貯蔵目的の地下室や穴蔵
   消費者が探している商品を飲食店の「Cellar」から見つけられるアプリにしたいという思いから命名しました。
 
