@@ -1,4 +1,4 @@
-.container-fluid
+.container-fluid.mt-5
   .row
     .col-1
     .col
@@ -12,7 +12,7 @@
                     = image_tag restaurant.image.url, size: "220x180"
               .col-md-8
                 .card-body
-                  %h5.card-title.d-flex.justify-content-between
+                  %h4.card-title.d-flex.justify-content-between
                     = restaurant.name
                     = link_to "店舗ページへ", restaurant_path(restaurant.id)
                   %p.card-text

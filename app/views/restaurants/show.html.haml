@@ -1,21 +1,28 @@
-.container-fluid
-  .restaurant-info
-    .row.mt-4.mb-4.d-flex.justify-content-center
-      - if @restaurants.image.present?
-        .col
-        = image_tag @restaurants.image.url, size: "220x160"
-      .card-body.col-8
-        .card-title
-          %a.col.h3
-            = @restaurants.name
-          .row
-            %p.card-text.col-6.mt-4.h5
-              = @restaurants.addres
-            .card-text.col-2
-              %p.h6 電話番号
-              = @restaurants.tel
-          %p.text-muted
-            = @restaurants.comment
+.container-fluid.my-5
+  .row
+    .col-1
+    .col
+      .card.mb-3{style: "max-width: 1080px;"}
+        .d-flex.mw-100
+          .row.no-gutters.w-100
+            .col-md-3
+              - if @restaurants.image.present?
+                .bd-placeholder-img.m-3
+                  = image_tag @restaurants.image.url, size: "220x180"
+            .col-md-8
+              .card-body
+                %h4.card-title.d-flex.justify-content-between
+                  = @restaurants.name
+                %p.card-text
+                  .row.d-flex
+                    .col
+                      = @restaurants.addres
+                    .col.text-right
+                      = @restaurants.station
+                %p.card-text
+                  = @restaurants.tel
+                %p.card-text
+                  = @restaurants.comment
 - if @foods.present?
   = render "foods/index"
 - if @drinks.present?
