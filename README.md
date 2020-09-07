@@ -23,7 +23,8 @@
 # DEMO
 
 ## トップページ
-https://user-images.githubusercontent.com/67886161/92348305-bdd5dd80-f10d-11ea-9ee2-6f0364ab12b3.png
+![CellarSearchトップページ](https://user-images.githubusercontent.com/67886161/92354289-0052e680-f11d-11ea-93ac-3da9ddbd2985.png)
+
 
 ransackを使用しました。部分一致検索です。
 必要な情報のみを入力し、条件に当てはまる飲食店の検索ができます。
