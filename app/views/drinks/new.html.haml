@@ -1,10 +1,10 @@
 .container-fluid
   .row.mt-5.text-right
     .col.h5
-      = link_to "日本酒リストの編集", new_sake_path
+      = link_to "日本酒リストの編集", new_sake_path, data: {"turbolinks" => false}
     .col-1
     .col.h5
-      = link_to "ワインリストの編集", new_wine_path
+      = link_to "ワインリストの編集", new_wine_path, data: {"turbolinks" => false}
     .col-1
     .col.h5
       %button.btn.btn-success{type: "button"}

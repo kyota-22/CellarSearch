@@ -12,7 +12,13 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.create(food_params)
-    redirect_to action: :new
+    if @food.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      redirect_to action: :new
+    end
   end
 
   private
