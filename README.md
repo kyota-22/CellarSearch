@@ -24,40 +24,33 @@
 
 ## トップページ
 ![CellarSearchトップページ](https://user-images.githubusercontent.com/67886161/92354289-0052e680-f11d-11ea-93ac-3da9ddbd2985.png)
-
-
 ransackを使用しました。部分一致検索です。
 必要な情報のみを入力し、条件に当てはまる飲食店の検索ができます。
 
 ## 新規登録画面
-https://user-images.githubusercontent.com/67886161/92348514-48b6d800-f10e-11ea-932f-726e14b57659.png
-
+<img width="1410" alt="CellarSearch新規登録画面" src="https://user-images.githubusercontent.com/67886161/92354429-3d1edd80-f11d-11ea-832e-234e0c64f7a4.png">
 トップページ→店舗ログイン・新規登録
 deviseを使用した飲食店の登録フォームです。
 
 ## 検索結果画面
 検索ワード
 日本酒生産地 "新潟県"、最寄駅 "中野駅"
-https://user-images.githubusercontent.com/67886161/92351472-ca126880-f116-11ea-8998-45890d450f31.png
-
+<img width="1408" alt="CellarSearch検索結果" src="https://user-images.githubusercontent.com/67886161/92354483-59227f00-f11d-11ea-9526-151e2190fa1c.png">
 トップページ→フォームを入力し検索ボタンをクリック
 検索ワードの条件を満たす飲食店の一覧です。
 
 ## 店舗詳細画面
-https://user-images.githubusercontent.com/67886161/92351757-718f9b00-f117-11ea-94ec-b41e589ba0c1.png
-
+![CellarSearch店舗詳細](https://user-images.githubusercontent.com/67886161/92354517-6fc8d600-f11d-11ea-8b66-b6d72b9369de.png)
 検索結果→店舗ページへ
 飲食店が登録したフード、ドリンク、日本酒、ワインのメニューを一覧できます。
 
 ## 店舗編集画面
-https://user-images.githubusercontent.com/67886161/92352419-02b34180-f119-11ea-8245-07e14569e403.png
-
+<img width="1387" alt="CellarSearch店舗編集" src="https://user-images.githubusercontent.com/67886161/92354553-84a56980-f11d-11ea-8697-04b6f44e44dd.png">
 ヘッダーの店舗情報編集をクリック
 ログインしている店舗の編集ができます。
 
 ## メニュー編集画面（ドリンク）
-https://user-images.githubusercontent.com/67886161/92351897-c4695280-f117-11ea-85e7-42bd5c51892f.png
-
+<img width="1414" alt="CellarSearchドリンク編集" src="https://user-images.githubusercontent.com/67886161/92354586-91c25880-f11d-11ea-90a1-183cf143e12b.png">
 店舗編集画面→ドリンク変更はこちら
 ログインしている店舗のメニュー編集ができます。
 非同期通信を実装しています。下部には店舗に現在登録されているメニューを表示。
