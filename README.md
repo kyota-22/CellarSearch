@@ -1,5 +1,5 @@
 # アプリ名
-  oshinagaki
+  CellarSearch
 
 # 概要
   ドリンクメニューから飲食店の検索ができるwebアプリです。
