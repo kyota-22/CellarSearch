@@ -7,7 +7,13 @@ class SakesController < ApplicationController
 
   def create
     @sake = Sake.create(sake_params)
-    redirect_to action: :new
+    if @sake.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      redirect_to action: :new
+    end
   end
 
   private

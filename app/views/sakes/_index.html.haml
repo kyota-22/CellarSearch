@@ -13,8 +13,7 @@
             %th{scope: "col", class: "sake_price"} 価格
             %th{scope: "col", class: "sake_prefecture"} 都道府県
             %th{scope: "col", class: "sake_comment"} コメント
-        %tbody
-          %tr
+        %tbody{class: "sake_list"}
           - @sakes.each do |sake|
             %tr
               %td
