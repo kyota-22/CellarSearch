@@ -4,21 +4,25 @@
     .col
       .card.mb-3{style: "max-width: 1080px;"}
         .d-flex.mw-100
-          .row.no-gutters.w-50
+          .row.no-gutters.w-100
             - @restaurants.each do |restaurant|
-              .col-md-4
+              .col-md-3
                 - if restaurant.image.present?
-                  .bd-placeholder-img
-                    = image_tag restaurant.image.url, size: "180x160"
+                  .bd-placeholder-img.m-3
+                    = image_tag restaurant.image.url, size: "220x180"
               .col-md-8
                 .card-body
-                  %h5.card-title
+                  %h5.card-title.d-flex.justify-content-between
                     = restaurant.name
                     = link_to "店舗ページへ", restaurant_path(restaurant.id)
-                    %p.card-text
-                      = restaurant.addres
-                    %p.card-text
-                      = restaurant.tel
-                    %p.card-text
-                      = restaurant.comment
+                  %p.card-text
+                    .row.d-flex
+                      .col
+                        = restaurant.addres
+                      .col.text-right
+                        = restaurant.station
+                  %p.card-text
+                    = restaurant.tel
+                  %p.card-text
+                    = restaurant.comment
     .col-1
