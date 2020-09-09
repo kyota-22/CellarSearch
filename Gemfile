@@ -67,7 +67,6 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'rubocop', require: false
 gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'mysql2'
 gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 gem 'rename'
