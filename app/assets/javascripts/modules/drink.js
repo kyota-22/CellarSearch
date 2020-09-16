@@ -11,6 +11,9 @@ $(function(){
         <td>
           ${drink.comment}
         </td>
+        <td class='text-center delete_box'>
+          <div class="delete_btn remove_list" data-id="${drink.id}">削除</div>
+        </td>
       </tr>`
     return html;
   };
@@ -23,7 +26,7 @@ $(function(){
     $.ajax({
       url: '/drinks',
       type: 'POST',
-      data: formData,  
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
@@ -41,6 +44,24 @@ $(function(){
     })
     .fail(function() {
       alert("ドリンクの追加に失敗しました");
+    });
+  });
+
+  // 全然できてない(ajaxのtypeはGETもしくはPOSTしか使えない)
+  $(".drink_list").on("click", ".delete_btn",function(){
+    // let drinkId = $(this).data(drink.id)
+    let drinkId = $(this).data("id");
+    $.ajax({
+      url: "/drinks/" + drinkId,
+      type: 'POST',
+      data: {"_method": "DELETE"},
+    })
+    .done(function(data){
+      $(this).parent().remove();
+      alert("ドリンクを削除しました");
+    })
+    .fail(function() {
+      alert("ドリンクの削除に失敗しました");
     });
   });
 });

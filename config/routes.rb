@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     end
   end
   resources :restaurants, only: [:index, :show, :edit, :update]
-  resources :drinks, only: [:new, :create]
+  resources :drinks, only: [:new, :create, :destroy]
   resources :foods, only: [:new, :create]
   resources :sakes, only: [:new, :create]
-  resources :wines, only: [:new, :create]
+  resources :wines, only: [:new, :create] 
   root "restaurants#index"
 end
