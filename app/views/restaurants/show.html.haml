@@ -6,23 +6,23 @@
         .d-flex.mw-100
           .row.no-gutters.w-100
             .col-md-3
-              - if @restaurants.image.present?
+              - if @restaurant.image.present?
                 .bd-placeholder-img.m-3
-                  = image_tag @restaurants.image.url, size: "220x180"
+                  = image_tag @restaurant.image.url, size: "220x180"
             .col-md-8
               .card-body
                 %h4.card-title.d-flex.justify-content-between
-                  = @restaurants.name
+                  = @restaurant.name
                 %p.card-text
                   .row.d-flex
                     .col
-                      = @restaurants.addres
+                      = @restaurant.addres
                     .col.text-right
-                      = @restaurants.station
+                      = @restaurant.station
                 %p.card-text
-                  = @restaurants.tel
+                  = @restaurant.tel
                 %p.card-text
-                  = @restaurants.comment
+                  = @restaurant.comment
 - if @foods.present?
   = render "foods/index"
 - if @drinks.present?

@@ -1,9 +1,6 @@
 class RestaurantsController < ApplicationController
   
   def index
-    # @search = Restaurant.search(params[:q])
-    # @restaurants = @search.result
-    # @drinks = Drink.includes(:restaurant)
     @q = Restaurant.all.ransack(params[:q])
     @restaurants = @q.result
   end
@@ -18,12 +15,11 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    restaurant = Restaurant.find(params[:id])
-    @restaurants = restaurant
-    @drinks = restaurant.drinks
-    @foods = restaurant.foods
-    @sakes = restaurant.sakes
-    @wines = restaurant.wines
+    @restaurant = Restaurant.find(params[:id])
+    @drinks = @restaurant.drinks
+    @foods = @restaurant.foods
+    @sakes = @restaurant.sakes
+    @wines = @restaurant.wines
   end
 
   def edit

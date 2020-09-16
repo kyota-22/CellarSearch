@@ -19,10 +19,15 @@ class DrinksController < ApplicationController
     end
   end
 
+  def destroy
+    @drink = Drink.find(params[:id])
+    @drink.destroy
+    redirect_to action: :new
+  end
+
   private
   def drink_params
     params.require(:drink).permit(:name, :price, :comment).merge(restaurant_id: current_restaurant.id)
   end
 
 end
-# 
