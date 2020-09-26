@@ -54,6 +54,7 @@
               %td
                 = drink.comment
               %td.text-center.delete_box
-                = link_to "削除", drink_path(drink.id), method: :delete, class: "delete_btn"
+                -# .delete_btn.remove_list{"data-id" => "${drink.id}"} 削除
+                = link_to "削除", drink_path(drink.id), method: :delete, class: "destroy_btn"
     .col-1
 

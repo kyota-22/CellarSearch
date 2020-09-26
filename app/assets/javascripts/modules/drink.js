@@ -47,9 +47,7 @@ $(function(){
     });
   });
 
-  // 全然できてない(ajaxのtypeはGETもしくはPOSTしか使えない)
   $(".drink_list").on("click", ".delete_btn",function(){
-    // let drinkId = $(this).data(drink.id)
     let drinkId = $(this).data("id");
     $.ajax({
       url: "/drinks/" + drinkId,
