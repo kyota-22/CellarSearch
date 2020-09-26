@@ -16,53 +16,56 @@
     .row.mb-2.mt-3
       .col-2
       .col
-        %h3 ドリンク名
+        %h4 ドリンク名
       .col-2
     .row.mb-2
       .col-2
       .col
         = f.search_field :drinks_name_cont, class: 'form-control', placeholder: '例：スーパードライ'
       .col-2
-    .row.mt-5
+    .row.mt-3
+      .col-2
+      #accordionExample.accordion.col
+        #headingOne
+          %button.btn.d-flex.align-items-center{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-target" => "#collapseOne", "data-toggle" => "collapse", type: "button"}
+            %h4 日本酒検索
+            %p{class: 'title_btn'}🔽
+        #collapseOne.collapse{"aria-labelledby" => "headingOne", "data-parent" => "#accordionExample"}
+          .d-flex
+            .col.w-50
+              銘柄
+              = f.search_field :sakes_name_cont, class: 'form-control', placeholder: '例：獺祭'
+            .col.w-50
+              生産地
+              = f.search_field :sakes_prefecture_cont, class: 'form-control', placeholder: '例：山口県'
+      .col-2
+    .row.mt-3
+      .col-2
+      #accordionExample.accordion.col
+        #headingTwo
+          %button.btn.d-flex.align-items-center{"aria-controls" => "collapseTwo", "aria-expanded" => "true", "data-target" => "#collapseTwo", "data-toggle" => "collapse", type: "button"}
+            %h4 ワイン検索
+            %p{class: 'title_btn'}🔽
+        #collapseTwo.collapse{"aria-labelledby" => "headingTwo", "data-parent" => "#accordionExample"}
+          .d-flex
+            .col.w-50
+              名前
+              = f.search_field :wines_name_cont, class: 'form-control', placeholder: '例：ロバートモンダヴィ'
+            .col.w-50
+              生産地
+              = f.search_field :wines_area_cont, class: 'form-control', placeholder: '例：アメリカ'
+          .d-flex
+            .col.w-50
+              品種
+              = f.search_field :wines_variety_cont, class: 'form-control', placeholder: '例：カベルネ・ソーヴィニヨン'
+            .col.w-50
+              タイプ
+              = f.search_field :wines_color_cont, class: 'form-control', placeholder: '例：赤'
+      .col-2
+    .row.mt-3
       .col-2
       .col
-        %h3 日本酒検索
-      .col-2
-    .row.mb-2
-      .col-2
-      .col-4
-        銘柄
-        = f.search_field :sakes_name_cont, class: 'form-control', placeholder: '例：獺祭'
-      .col-4
-        生産地
-        = f.search_field :sakes_prefecture_cont, class: 'form-control', placeholder: '例：山口県'
-      .col-2
-    .row.mt-5
-      .col-2
-      .col
-        %h3 ワイン検索
-    .row.mb-2
-      .col-2
-      .col-4
-        名前
-        = f.search_field :wines_name_cont, class: 'form-control', placeholder: '例：ロバートモンダヴィ'
-      .col-4
-        生産地
-        = f.search_field :wines_area_cont, class: 'form-control', placeholder: '例：アメリカ'
-      .col-2
-    .row.mb-2
-      .col-2
-      .col-4
-        品種
-        = f.search_field :wines_variety_cont, class: 'form-control', placeholder: '例：カベルネ・ソーヴィニヨン'
-      .col-4
-        タイプ
-        = f.search_field :wines_color_cont, class: 'form-control', placeholder: '例：赤'
-      .col-2
-    .row.mt-5
-      .col-2
-      .col
-        %h3 その他条件
+        %h4 その他条件
     .row.mb-2
       .col-2
       .col
