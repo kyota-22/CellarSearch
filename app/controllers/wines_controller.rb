@@ -16,6 +16,12 @@ class WinesController < ApplicationController
     end
   end
 
+  def destroy
+    @wine = Wine.find(params[:id])
+    @wine.destroy
+    redirect_to action: :new
+  end
+
   private
   def wine_params
     params.require(:wine).permit(:name, :price, :comment, :color, :area, :variety).merge(restaurant_id: current_restaurant.id)
