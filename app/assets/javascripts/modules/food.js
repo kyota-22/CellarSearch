@@ -11,6 +11,9 @@ $(function(){
         <td>
           ${food.comment}
         </td>
+        <td class='text-center delete_box'>
+          <div class="delete_btn remove_list" data-id="${food.id}">削除</div>
+        </td>
       </tr>`
     return html;
   };
@@ -43,4 +46,21 @@ $(function(){
       alert("フードの追加に失敗しました");
     });
   });
+
+  $(".food_list").on("click", ".delete_btn",function(){
+    let foodId = $(this).data("id");
+    $.ajax({
+      url: "/foods/" + foodId,
+      type: 'POST',
+      data: {"_method": "DELETE"},
+    })
+    .done(function(data){
+      $(this).parent().remove();
+      alert("フードを削除しました");
+    })
+    .fail(function() {
+      alert("フードの削除に失敗しました");
+    });
+  });
+
 });
