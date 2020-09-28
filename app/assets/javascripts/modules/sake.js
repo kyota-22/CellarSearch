@@ -5,14 +5,18 @@ $(function(){
       `<tr>
         <td>
           ${sake.name}
+        </td>
         <td>
           ${sake.price}
         </td>
         <td>
-        ${sake.prefecture}
+          ${sake.prefecture}
         </td>
         <td>
           ${sake.comment}
+        </td>
+        <td class='text-center delete_box'>
+          <div class="delete_btn remove_list" data-id="${sake.id}">削除</div>
         </td>
       </tr>`
     return html;
@@ -46,4 +50,21 @@ $(function(){
       alert("日本酒の追加に失敗しました");
     });
   });
+
+  $(".sake_list").on("click", ".delete_btn",function(){
+    let sakeId = $(this).data("id");
+    $.ajax({
+      url: "/sakes/" + sakeId,
+      type: 'POST',
+      data: {"_method": "DELETE"},
+    })
+    .done(function(data){
+      $(this).parent().remove();
+      alert("日本酒を削除しました");
+    })
+    .fail(function() {
+      alert("日本酒の削除に失敗しました");
+    });
+  });
+
 });

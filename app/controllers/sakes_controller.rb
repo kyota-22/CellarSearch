@@ -16,6 +16,12 @@ class SakesController < ApplicationController
     end
   end
 
+  def destroy
+    @sake = Sake.find(params[:id])
+    @sake.destroy
+    redirect_to action: :new
+  end
+
   private
   def sake_params
     params.require(:sake).permit(:name, :price, :comment, :prefecture).merge(restaurant_id: current_restaurant.id)

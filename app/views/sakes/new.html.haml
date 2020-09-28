@@ -28,4 +28,34 @@
       .col.text-center
         = f.submit 'リストを更新する', class: 'btn btn-primary w-25 sake_btn'
 .container-fluid.mt-5
-= render "index"
+.container-fluid
+  .row.bg-primary
+    .col
+    .font-italic.text-light
+      %h4 日本酒メニュー
+    .col
+.container-fluid.sake_box
+  .row
+    .col-1
+    .col
+      %table.table.table-striped
+        %thead
+          %tr
+            %th{scope: "col", class: "name_width"} 商品名
+            %th{scope: "col", class: "price_width"} 価格
+            %th{scope: "col", class: "prefecture_width"} 都道府県
+            %th{scope: "col", class: "comment_width"} コメント
+        %tbody{class: "sake_list"}
+          - @sakes.each do |sake|
+            %tr
+              %td
+                = sake.name
+              %td
+                = sake.price
+              %td
+                = sake.prefecture
+              %td
+                = sake.comment
+              %td.text-center.delete_box
+                = link_to "削除", sake_path(sake.id), method: :delete, class: "destroy_btn"
+    .col-1
