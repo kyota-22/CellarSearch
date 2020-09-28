@@ -37,4 +37,40 @@
       .col.text-center
         = f.submit 'リストを更新する', class: 'btn btn-primary w-25 wine_btn'
 .container-fluid.mt-5
-= render "index"
+.container-fluid
+  .row.bg-warning
+    .col
+    .font-italic.text-light
+      %h4 ワインメニュー
+    .col
+.container-fluid.wine_box
+  .row
+    .col-1
+    .col
+      %table.table.table-striped
+        %thead
+          %tr
+            %th{scope: "col", class: "wine_name"} 商品名
+            %th{scope: "col", class: "wine_price"} 価格
+            %th{scope: "col", class: "wine_type"} 色
+            %th{scope: "col", class: "wine_area"} 生産地
+            %th{scope: "col", class: "wine_variety"} 品種
+            %th{scope: "col", class: "wine_comment"} コメント
+        %tbody{class: "wine_list"}
+          - @wines.each do |wine|
+            %tr
+              %td
+                = wine.name
+              %td
+                = wine.price
+              %td
+                = wine.color
+              %td
+                = wine.area
+              %td
+                = wine.variety
+              %td
+                = wine.comment
+              %td.text-center.delete_box
+                = link_to "削除", wine_path(wine.id), method: :delete, class: "destroy_btn"
+    .col-1

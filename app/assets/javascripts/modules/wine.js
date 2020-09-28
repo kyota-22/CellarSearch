@@ -5,17 +5,25 @@ $(function(){
       `<tr>
         <td>
           ${wine.name}
+        </td>
         <td>
           ${wine.price}
+        </td>
         <td>
           ${wine.color}
+        </td>
         <td>
           ${wine.area}
+        </td>
         <td>
           ${wine.variety}
+        </td>
         <td>
           ${wine.comment}
         </td>
+        <td class='text-center delete_box'>
+          <div class="delete_btn remove_list" data-id="${wine.id}">削除</div>
+      </td>
       </tr>`
     return html;
   };
@@ -48,4 +56,21 @@ $(function(){
       alert("ワインの追加に失敗しました");
     });
   });
+
+  $(".wine_list").on("click", ".delete_btn",function(){
+    let wineId = $(this).data("id");
+    $.ajax({
+      url: "/wines/" + wineId,
+      type: 'POST',
+      data: {"_method": "DELETE"},
+    })
+    .done(function(data){
+      $(this).parent().remove();
+      alert("ワインを削除しました");
+    })
+    .fail(function() {
+      alert("ワインの削除に失敗しました");
+    });
+  });
+
 });
