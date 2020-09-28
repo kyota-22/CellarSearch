@@ -22,4 +22,31 @@
       .col.text-center
         = f.submit 'メニューを更新する', class: 'btn btn-primary w-25 food_btn'
 .container-fluid.mt-5
-= render "index"
+.container-fluid
+  .row.bg-warning
+    .col
+    .font-italic.text-light
+      %h4 フードメニュー
+    .col
+.container-fluid
+  .row
+    .col-1
+    .col
+      %table.table.table-striped
+        %thead
+          %tr
+            %th{scope: "col", class: "name_width"} 商品名
+            %th{scope: "col", class: "price_width"} 価格
+            %th{scope: "col", class: "comment_width"} コメント
+        %tbody{class: "food_list"}
+          - @foods.each do |food|
+            %tr
+              %td
+                = food.name
+              %td
+                = food.price
+              %td
+                = food.comment
+              %td.text-center.delete_box
+                = link_to "削除", food_path(food.id), method: :delete, class: "destroy_btn"
+    .col-1
