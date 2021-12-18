@@ -55,18 +55,18 @@
 
 ## 店舗新規登録画面
 <img width="1410" alt="CellarSearch新規登録画面" src="https://user-images.githubusercontent.com/67886161/92354429-3d1edd80-f11d-11ea-832e-234e0c64f7a4.png">
-トップページ→店舗ログイン・新規登録
-- deviseを使用した飲食店の登録フォームです。  
+<br>トップページ→店舗ログイン・新規登録
+ - deviseを使用した飲食店の登録フォームです。  
 
 ## 店舗編集画面
 <img width="1387" alt="CellarSearch店舗編集" src="https://user-images.githubusercontent.com/67886161/92354553-84a56980-f11d-11ea-8697-04b6f44e44dd.png">
-ヘッダーの店舗情報編集をクリック
+<br>ヘッダーの店舗情報編集をクリック
  - ログインしている店舗の編集ができます。  
 
 ## メニュー編集画面（ドリンク）
 <img width="1414" alt="CellarSearchドリンク編集" src="https://user-images.githubusercontent.com/67886161/92354586-91c25880-f11d-11ea-90a1-183cf143e12b.png">
-店舗編集画面→ドリンク変更はこちら  
-ログインしている店舗のメニュー編集ができます。
+店舗編集画面→ドリンク変更はこちら
+<br>ログインしている店舗のメニュー編集ができます。
  - 非同期通信を実装しています。
  - 下部には店舗に現在登録されているメニューを表示。
  - その他のメニュー編集についても大方同じ見た目、仕様になっております。
