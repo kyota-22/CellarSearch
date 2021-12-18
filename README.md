@@ -45,7 +45,7 @@
 日本酒生産地 "新潟県"、最寄駅 "中野駅"  
 <img width="1408" alt="CellarSearch検索結果" src="https://user-images.githubusercontent.com/67886161/92354483-59227f00-f11d-11ea-9526-151e2190fa1c.png">
 トップページ→フォームを入力し検索ボタンをクリック
-- 検索ワードの条件を満たす飲食店の一覧です。  
+ - 検索ワードの条件を満たす飲食店の一覧です。  
 
 ## 店舗詳細画面
 ![CellarSearch店舗詳細](https://user-images.githubusercontent.com/67886161/92354517-6fc8d600-f11d-11ea-8b66-b6d72b9369de.png)
